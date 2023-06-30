@@ -1,0 +1,64 @@
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-grievance">Grievance Redressal</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a [routerLink]="['/adminhome']"><span class ="las la-home"></span>
+                        <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class ="las la-clipboard-list"></span>
+                        <span>Customers</span></a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="">
+                    <span class="las la-bars"></span>
+                </label>
+                Customer details...
+            </h2>
+        </header>
+        <div class="full-grid">
+            <div class="projects">
+                <div class="card">
+                    <div class="card-body">
+                        <table width="100%" >
+                            <thead>
+                                <tr>
+                                    <td>S.No</td>
+                                    <td>Name</td>
+                                    <td>Email ID</td>
+                                    <td>        </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of cus; let i = index;" >
+                                    <td>{{i+1}}</td>
+                                    <td>{{product.name}}</td>
+                                    <td>{{product.email}}</td>
+                                    <!--<td>{{product.password}}</td>-->
+                                    <!--<td>
+                                        <input type="number" placeholder="Quantity" [ngModel]="qnty" [ngModelOptions]="{standalone: true}" name="qnty"  required>
+                                        <button  class="btn btn-danger" (click)="order(product.id,product.amount)">Order</button>
+                                        <span ><button type="submit" [routerLink]="['/adminsolve']">Resolve problem</button></span>
+                                    </td>-->
+                                    <td>
+                                        <button (click)="delete(product.email)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

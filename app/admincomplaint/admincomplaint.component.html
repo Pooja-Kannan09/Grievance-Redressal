@@ -1,0 +1,68 @@
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-grievance">Grievance Redressal</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a [routerLink]="['/adminhome']"><span class ="las la-home"></span>
+                        <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="" class="active"><span class ="las la-clipboard-list"></span>
+                        <span>Complaints</span></a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="">
+                    <span class="las la-bars"></span>
+                </label>
+                Complaints ...
+            </h2>
+        </header>
+        <div class="full-grid">
+            <div class="projects">
+                <div class="card">
+                    <div class="card-body">
+                        <table width="100%" >
+                            <thead>
+                                <tr>
+                                    <td>Complaint ID</td>
+                                    <td>Email</td>
+                                    <td>Subject</td>
+                                    <td>Department</td>
+                                    <td>Content of complaint</td>
+                                    <td>Status</td>
+                                   <!-- <td>Take action</td>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of complt; let i = index;" >
+                                    <td>{{product.complaintID}}</td>
+                                    <td>{{product.c_email}}</td>
+                                    <td>{{product.c_subject}}</td>
+                                    <td>{{product.c_dept}}</td>
+                                    <td>{{product.c_content}}</td>
+                                    <td>{{product.c_status}}</td>
+                                    <td>
+                                       <!-- <textarea  rows="10" cols="50" [(ngModel)]="solution" [ngModelOptions]="{standalone: true}" name={{product.complaintID}}  required></textarea>
+                                        <input type="number" placeholder="Quantity" [ngModel]="qnty" [ngModelOptions]="{standalone: true}" name="qnty"  required>
+                                        <button  class="btn btn-danger" (click)="order(product.id,product.amount)">Order</button>-->
+                                        <span ><button type="submit" (click)="sendSolution(product.complaintID)">Resolve problem</button></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

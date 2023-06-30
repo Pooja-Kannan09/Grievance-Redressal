@@ -1,0 +1,35 @@
+
+<body>
+    <header class="header">
+      <a  class="logo">QuickFix   </a>
+      <nav class="nav-items">
+        
+        <a [routerLink]="['/status']">My complaints</a>
+        <a (click)="logout()" class="btn">Logout</a>
+      </nav>
+
+      <img src="/assets/img/user_icon.png">
+      <p>{{email}}</p>
+    </header>
+    <main>
+      <div class="intro">
+        <h1>Complaints</h1>
+        <a>
+        <button id="btn_click" (click)="call()">File Complaint</button>
+        </a>
+        
+      </div>
+    </main>
+  <!-- <footer class="footer">
+      <div class="copy">&copy; 2022 Developer</div>
+      <div class="bottom-links">
+        <div class="links">
+          <span>More Info</span>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+       
+      </div>
+    </footer>-->
+  </body>

@@ -1,0 +1,36 @@
+<body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+      </div>
+      <br>
+      <br>
+      <br>
+        <div class="form-inner">
+          <form class="login">
+            <div class="field">
+              <input type="text" placeholder="email address" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email"  required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password" required>
+            </div>
+            <!--<div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>-->
+            <div class="field btn">
+                <div class="btn-layer">
+                </div>
+                <button type="submit" (click)="login()" >Login</button>
+            </div>
+            <br>
+            <p>Not a member?</p><a [routerLink]="['/signup']">Sign up</a>
+            <!--<div class="signup-link">Not a member? <a [routerLink]="['/login']">Signup now</a></div>-->
+          </form>
+        </div>
+    </div>
+</body>
+

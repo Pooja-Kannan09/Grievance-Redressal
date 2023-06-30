@@ -1,0 +1,31 @@
+<p>solution works!</p>
+<body>
+    <!--<header class="header">
+        <a href="#" class="logo">QuickFix</a>
+        <nav class="nav-items">
+          <a href="home.html">Home</a>
+          
+          <a href="#">View status</a>
+          <a href="#">Logout</a>
+        </nav>
+      </header>-->
+    
+    <div class="background">
+    </div>
+    <br>
+    <form action="/getStatus" method="post">
+        <label for="c_id">Complaint id : {{compId}}</label>
+      
+        <label for="cpemail">Submitted by : {{complt.c_email}}</label>
+        <label for="cpsubject">Complaint Subject : {{complt.c_subject}}</label>
+
+        <label for="cpdept">Complaint Department: {{complt.c_dept}}</label>
+        <label for="cpcontent">Complaint : {{complt.c_content}}</label>
+
+        <label for="Complaint Solution">Solution provided</label>
+        <textarea placeholder="Type solution..." rows="10" cols="50" [(ngModel)]="solution" [ngModelOptions]="{standalone: true}" name="solution"  required></textarea>
+        
+        <button type="submit" (click)="sendSolution()">Send Solution</button>
+        
+    </form>
+</body>

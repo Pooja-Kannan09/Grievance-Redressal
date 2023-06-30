@@ -1,0 +1,42 @@
+<body>
+    <!--<header class="header">
+        <a href="#" class="logo">QuickFix</a>
+        <nav class="nav-items">
+          <a href="home.html">Home</a>
+          
+          <a href="#">View status</a>
+          <a href="#">Logout</a>
+        </nav>
+      </header>-->
+    
+    <div class="background">
+    </div>
+    <br>
+    <form  method="post">
+
+      <label for="comp id">Complaint id</label>
+      <input type="text" placeholder="id" [(ngModel)]="cid" [ngModelOptions]="{standalone: true}" name="cid"  required>
+
+
+        <label for="Email">Email</label>
+        <input type="text" placeholder="email address" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email"  required>
+
+
+        <label for="Complaint subject">Complaint Subject</label>
+        <input type="text" placeholder="subject" [(ngModel)]="subject" [ngModelOptions]="{standalone: true}" name="subject"  required>
+
+
+        <label for="Complaint dept">Department</label>
+        <input type="text" placeholder="department" [(ngModel)]="dept" [ngModelOptions]="{standalone: true}" name="dept"  required>
+
+
+        <label for="Complaint">Complaint</label>
+        <textarea placeholder="Complaint" rows="5" cols="50" [(ngModel)]="content" [ngModelOptions]="{standalone: true}" name="content"  required></textarea>
+
+        <label for="Solution">Solution suggested...</label>
+        <textarea placeholder="Type the solution here" rows="5" cols="50" [(ngModel)]="solution" [ngModelOptions]="{standalone: true}" name="solution"  required></textarea>
+
+
+        <button type="submit" (click)="sendSolution()">Submit solution</button>
+    </form>
+</body>

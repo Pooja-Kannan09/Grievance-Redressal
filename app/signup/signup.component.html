@@ -1,0 +1,43 @@
+
+<body>
+        <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
+      </div>
+        <div class="wrapper">
+          <div class="title-text">
+            <div class="title signup">Signup Form</div>
+        </div>
+    <br>
+      <div class="form-inner">
+           
+           <form id="signup" class="signup">
+                <div class="field">
+                  <!--<input type="text" name="name" id="name" placeholder="user name" required>-->
+                  <input type="text" placeholder="user name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" name="name"  required>
+                </div>
+                  <div class="field">
+                    <!--<input type="text" name="email" id="email" placeholder="Email Address" required>-->
+                    <input type="email"  placeholder="email address" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+                     name="email"   required>
+                     
+                    </div>
+
+                
+                <div class="field">
+                  <!--<input type="password" name="pass" id ="pass"  placeholder="Password" required>-->
+                  <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password" required>
+
+                </div>
+               <div class="field">
+                  <input type="password" placeholder="Retype Password" [(ngModel)]="confirmpassword" [ngModelOptions]="{standalone: true}" name="confirmpassword"   required>
+                </div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <!--<input type="submit" value="Sign  up">-->
+                  <button type="submit" (click)="signup()" >Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
